@@ -4,3 +4,7 @@ Carpeta para incluir las imágenes que considere oportunas.
 
 - .svg para diagramas
 - .png para imágenes
+
+## PNG Images
+
+![](*.png)
