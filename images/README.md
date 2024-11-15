@@ -7,4 +7,4 @@ Carpeta para incluir las imágenes que considere oportunas.
 
 ## PNG Images
 
-![](*.png)
+![Hoja1](Hoja1.png)
