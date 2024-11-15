@@ -1,0 +1,63 @@
+@startuml
+    class "Flota:tus" {
+    }
+
+    class "Bus:24c1" {
+        -color: azul
+        -modelo: 123
+        -id: 3
+    }
+
+    class "Conductor:conductor" {
+        -nombre: Roberto
+        -id: 3
+    }
+
+    class "Tarifa:tarifa" {
+        -precio: 1,80
+        -metodo: Metálico
+    }
+
+    class "Ruta:ruta24" {
+        -id: 17
+        -duracion: 20
+    }
+
+    class "Incidencia" {
+        -tipo: Atropello
+        -duracion: 1 dia
+        -severidad: Alta
+    }
+
+    class "Persona" {
+    }
+
+    class "Pasajero:pasajero" {
+        -nombre: David
+        -saldo: 2
+    }
+
+    class "Parada:parada10" {
+        -numero: 10
+        -ubicacion: C/xxxx
+    }
+
+    class "Horario:horario" {
+        -inicio: 8
+        -final: 21
+    }
+
+    "Flota:tus" --> "Bus:24c1" : Tiene
+    "Bus:24c1" --> "Conductor:conductor" : Tiene
+    "Bus:24c1" --> "Tarifa:tarifa" : Tiene
+    "Bus:24c1" --> "Ruta:ruta24" : Tiene
+    "Bus:24c1" --> "Incidencia" : Tiene
+    "Conductor:conductor" <-- "Persona"
+    "Persona" --> "Pasajero:pasajero"
+    "Pasajero:pasajero" --> "Tarifa:tarifa" : Paga
+    "Pasajero:pasajero" --> "Parada:parada10" : Espera_en
+    "Ruta:ruta24" --> "Parada:parada10" : Tiene
+    "Ruta:ruta24" --> "Horario:horario" : Tiene
+    "Incidencia" --> "Horario:horario" : Afecta
+    "Conductor:conductor" --> "Horario:horario" : Tiene
+@enduml

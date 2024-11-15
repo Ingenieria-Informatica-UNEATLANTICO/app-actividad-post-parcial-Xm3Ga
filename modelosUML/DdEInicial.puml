@@ -1,0 +1,11 @@
+@startuml
+[*] --> Funcional
+
+Funcional --> Averiado
+Funcional --> En_ruta
+Funcional --> En_parada
+Averiado --> Funcional
+
+En_ruta --> En_parada
+En_parada --> En_ruta
+@enduml
