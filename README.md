@@ -1,53 +1,32 @@
-# Repo plantilla para exámenes [PRG*x*|EDA*x*|IDSW*x*]@gII.uneatlantico
+### Nota importante
+Al exportar los .svg de los modelos me daba un error, así que los he tenido que exportar en formato .png
 
-*Este documento es una guía para la realización y entrega de las evaluaciones en las asignaturas PRGx, EDAx e IDSWx del Grado en Ingeniería Informática. Detalla la estructura del repositorio de entrega, los artefactos requeridos y los criterios de evaluación.*
+# [Examen escaneado (click para ver)](images/README.md)
 
-## Enunciado del examen
+# Modelo del dominio Examen 📝
 
-En el repo de la asignatura, carpeta `/evaluaciones`, apartado del examen correspondiente.
+## [Diagrama de clases](modelosUML/DdCInicial.puml)
 
-### Retos
+![DdCV2](images/DdCInicial.png)
 
-Indicados dentro del enunciado del examen.
+## [Diagrama de Objetos](modelosUML/DdOInicial.puml)
 
-## Entrega del examen
+![DdOV2](images/DdOInicial.png)
 
-En el repositorio destinado para tal fin en el examen.
+## [Diagrama de Estados (Autobús)](modelosUML/DdEInicial.puml)
 
-### Artefactos
+![DdEV2](images/DdEInicial.png)
 
-A continuación una lista de artefactos que habitualmente constituyen la entrega de un examen:
+# Modelo del dominio Final 🎓
 
-||||
-|-|-|-|
-|1|Archivo **README.md**|**Este archivo**, sobreescrito con su presentación de la propuesta de solución al examen.|
-|2|Código fuente|Proyecto ordenado dentro de la carpeta `/src`.|
-|3|Diagramas UML|Archivos fuente en la carpeta `/modelosUML`.|
-| ||Diagramas exportados en formato .svg en la carpeta `/images`. |
-|4|Imágenes|Si considera necesario incluir imágenes además de los diagramas, deben alojarse en la carpeta `/images` y estar referenciadas en el documento de entrega.|
-| ||Para diagramas use el formato .svg y para imágenes comunes, el formato .png.|
-|5|Documentación adicional|En la carpeta `/documents`.|
+## [Diagrama de clases](modelosUML/DdCV2.puml)
 
-### Qué se debe entregar
+![DdCV2](images/DdCV2.png)
 
-- Los artefactos a entregar se indican en el examen de modo específico. Se especificará cuales son obligatorios.
-- Usted tiene la libertad de decidir si incluir o no los elementos que no sean explícitamente requeridos en el enunciado del examen. Su inclusión es facultativa y debe basarse en su criterio sobre la relevancia o aporte que estos elementos puedan tener para el trabajo presentado.
-- Todos los artefactos han de quedar adecuadamente relacionados desde el artefacto 1.
+## [Diagrama de Objetos](modelosUML/DdOV2.puml)
 
-## Se valorará
+![DdOV2](images/DdOV2.png)
 
-- Proceso de creación.
-- Exactitud en la solución.
-- Adecuado reparto de responsabilidades.
-- Código limpio.
-- Claridad del código.
-- Gestión de estados.
-- Y, por supuesto, el uso de los temas vistos en clase.
+## [Diagrama de Estados (Autobús)](modelosUML/DdEV2.puml)
 
-### Se propone/sugiere
-
-|||
-|-|-|
-|Planificación| Planifique su enfoque utilizando diagramas, esquemas, estados y/o pseudocódigo. Lo puede aportar en su repo, como diagrama o como imagen (foto), en la carpeta adecuada y enlazado desde el README.md|
-|Documentación|En dicho README.md puede explicar cómo cada parte contribuye a la solución general. Y como hemos debatido ampliamente, evite los comentarios a su código: ¡que el código se autoexplique!.|
-|Delegación de responsabilidades|Dedíquele un momento a reflexionar sobre cómo reparte las responsabilidades entre los diferentes artefactos y cómo esto afecta la claridad y eficiencia de su solución.|
+![DdEV2](images/DdEV2.png)
