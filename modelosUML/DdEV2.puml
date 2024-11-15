@@ -1,0 +1,16 @@
+@startuml
+[*] --> EnCochera : Inicio del día
+
+EnCochera --> EnRuta : Asignación conductor
+EnRuta --> EnParada : Llegada a parada
+EnParada --> EnRuta : Continuar ruta
+EnRuta --> Incidencia : Problema reportado
+Incidencia --> EnRuta : Resolución
+EnRuta --> EnCochera : Fin de turno
+EnCochera --> [*] : Fin del día
+
+note right of EnCochera : Estado inicial/final del bus
+note right of EnRuta : Circulando según horario
+note right of EnParada : Recogida/bajada pasajeros
+note right of Incidencia : Gestión de problemas
+@enduml
