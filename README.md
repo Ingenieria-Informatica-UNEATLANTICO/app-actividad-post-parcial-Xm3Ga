@@ -14,3 +14,5 @@ Al exportar los .svg de los modelos me daba un error, así que los he tenido que
 ![DdOV2](images/DdOV2.png)
 
 ## [Diagrama de Estados](modelosUML/DdEV2.puml)
+
+![DdEV2](images/DdEV2.png)
