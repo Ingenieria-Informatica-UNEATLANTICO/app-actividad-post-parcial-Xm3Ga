@@ -1,0 +1,58 @@
+@startuml
+    class "Persona:p1" {
+        -nombre: Roberto
+        -id: 3
+    }
+    class "Persona:p2" {
+        -nombre: David
+        -id: 4
+    }
+    class "Flota:tus" {
+        -buses: [Bus:24c1]
+    }
+    class "Bus:24c1" {
+        -color: azul
+        -modelo: 123
+        -id: 3
+    }
+    class "Conductor:conductor" {
+    }
+    class "Tarifa:tarifa" {
+        -precio: 1,80
+        -metodo: Metálico
+    }
+    class "Ruta:ruta24" {
+        -id: 17
+        -duracion: 20
+    }
+    class "Incidencia:inc1" {
+        -tipo: Atropello
+        -duracion: 1 dia
+        -severidad: Alta
+    }
+    class "Pasajero:pasajero" {
+        -saldo: 2
+    }
+    class "Parada:parada10" {
+        -numero: 10
+        -ubicacion: C/xxxx
+    }
+    class "Horario:horario" {
+        -inicio: 8
+        -final: 21
+    }
+
+    "Persona:p1" <|-- "Conductor:conductor"
+    "Persona:p2" <|-- "Pasajero:pasajero"
+    "Flota:tus" "1" *-- "1" "Bus:24c1" : contiene
+    "Bus:24c1" "1" -- "1" "Conductor:conductor" : conduce >
+    "Bus:24c1" "1" -- "1" "Tarifa:tarifa" : aplica >
+    "Bus:24c1" "1" -- "1" "Ruta:ruta24" : sigue >
+    "Bus:24c1" "1" -- "1" "Incidencia:inc1" : registra >
+    "Pasajero:pasajero" -- "Tarifa:tarifa" : paga >
+    "Pasajero:pasajero" -- "Parada:parada10" : espera en >
+    "Ruta:ruta24" -- "Parada:parada10" : contiene >
+    "Ruta:ruta24" -- "Horario:horario" : tiene >
+    "Incidencia:inc1" -- "Horario:horario" : afecta >
+    "Conductor:conductor" -- "Horario:horario" : cumple >
+@enduml
